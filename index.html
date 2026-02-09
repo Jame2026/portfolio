@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Full Stack Developer</title>
+    <meta name="description"
+        content="Portfolio of a skilled Full Stack Developer with expertise in HTML5, CSS3, JavaScript, PHP, Python, Java, C++, and various database technologies.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+    <div class="cursor-glow"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">CK<span>Portfolio</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">Hi, I'm <span class="gradient-text">Chem Khoeurn</span></h1>
+                <h2 class="fade-in">I am a <span class="typing-text"></span></h2>
+                <p class="fade-in">Expertise in building scalable web applications and managing cloud infrastructure.
+                    From frontend design to backend architecture and seamless deployment.</p>
+                <div class="hero-btns fade-in">
+                    <a href="#projects" class="btn btn-primary">View Projects</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    <a href="#" class="btn btn-secondary">Download CV <i data-lucide="download"
+                            style="width:16px; margin-left:5px;"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in">
+                <canvas id="hero-canvas"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>Frontend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><i data-lucide="html5"></i> HTML5</div>
+                        <div class="skill-item"><i data-lucide="layout"></i> CSS3</div>
+                        <div class="skill-item"><i data-lucide="bootstrap"></i> Bootstrap</div>
+                        <div class="skill-item"><i data-lucide="code-2"></i> JavaScript</div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Backend</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><i data-lucide="server"></i> PHP</div>
+                        <div class="skill-item"><i data-lucide="terminal"></i> Python</div>
+                        <div class="skill-item"><i data-lucide="coffee"></i> Java</div>
+                        <div class="skill-item"><i data-lucide="binary"></i> C++</div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Databases</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><i data-lucide="database"></i> MySQL</div>
+                        <div class="skill-item"><i data-lucide="database"></i> PostgreSQL</div>
+                        <div class="skill-item"><i data-lucide="flame"></i> Firebase</div>
+                        <div class="skill-item"><i data-lucide="database"></i> MongoDB</div>
+                    </div>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>DevOps & Others</h3>
+                    <div class="skill-items">
+                        <div class="skill-item"><i data-lucide="cpu"></i> Linux</div>
+                        <div class="skill-item"><i data-lucide="cloud"></i> AWS</div>
+                        <div class="skill-item"><i data-lucide="globe"></i> Domain Mgmt</div>
+                        <div class="skill-item"><i data-lucide="terminal-square"></i> MobaXterm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item left fade-in">
+                    <div class="timeline-content">
+                        <h3>Full Stack Developer</h3>
+                        <span class="date">2024 - Present</span>
+                        <p>Building scalable web applications and voting systems using PHP, MySQL, and modern JS
+                            frameworks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right fade-in">
+                    <div class="timeline-content">
+                        <h3>System Administrator</h3>
+                        <span class="date">2023 - 2024</span>
+                        <p>Managed Linux servers, deployed AWS infrastructure, and handled domain configurations using
+                            MobaXterm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="app">App</button>
+                <button class="filter-btn" data-filter="game">Game</button>
+            </div>
+            <div class="project-grid">
+                <!-- Project 1: Online Voting System -->
+                <div class="project-card fade-in" data-category="web">
+                    <div class="project-img" id="img-voting"></div>
+                    <div class="project-info">
+                        <h3>Online Voting System</h3>
+                        <p>Secure and transparent voting platform with real-time results and user verification.</p>
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2: Laptop Store -->
+                <div class="project-card fade-in" data-category="web">
+                    <div class="project-img" id="img-laptop"></div>
+                    <div class="project-info">
+                        <h3>Laptop Store</h3>
+                        <p>E-commerce platform for high-performance laptops with integrated payment gateways.</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Bootstrap</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3: E-food -->
+                <div class="project-card fade-in" data-category="app">
+                    <div class="project-img" id="img-food"></div>
+                    <div class="project-info">
+                        <h3>E-food</h3>
+                        <p>A comprehensive food delivery application connecting local restaurants with customers.</p>
+                        <div class="project-tags">
+                            <span>Java</span>
+                            <span>Firebase</span>
+                            <span>Android</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4: Movie Booking System -->
+                <div class="project-card fade-in" data-category="app">
+                    <div class="project-img" id="img-movie"></div>
+                    <div class="project-info">
+                        <h3>Movie Booking System</h3>
+                        <p>Streamlined ticket booking platform with seat selection and movie schedules.</p>
+                        <div class="project-tags">
+                            <span>HTML5/CSS3</span>
+                            <span>C++</span>
+                            <span>MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 5: Game Development -->
+                <div class="project-card fade-in" data-category="game">
+                    <div class="project-img" id="img-game"></div>
+                    <div class="project-info">
+                        <h3>Advanced 2D/3D Game</h3>
+                        <p>Interactive gaming experience with custom physics engine and engaging gameplay.</p>
+                        <div class="project-tags">
+                            <span>C++</span>
+                            <span>Java</span>
+                            <span>Game Logic</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 6: Chat App -->
+                <div class="project-card fade-in" data-category="app">
+                    <div class="project-img" id="img-chat"></div>
+                    <div class="project-info">
+                        <h3>Real-time Chat App</h3>
+                        <p>Encrypted messaging platform supporting group chats and file sharing.</p>
+                        <div class="project-tags">
+                            <span>Firebase</span>
+                            <span>JavaScript</span>
+                            <span>Linux/AWS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deployment" class="deployment">
+        <div class="container">
+            <h2 class="section-title">Cloud & Deployment</h2>
+            <div class="deployment-content fade-in">
+                <div class="deployment-card">
+                    <i data-lucide="cloud"></i>
+                    <h3>AWS Infrastructure</h3>
+                    <p>Experience in setting up EC2 instances, RDS databases, and S3 buckets for scalable applications.
+                    </p>
+                </div>
+                <div class="deployment-card">
+                    <i data-lucide="terminal"></i>
+                    <h3>Linux & MobaXterm</h3>
+                    <p>Expertise in remote server management using MobaXterm, SSH configuration, and automated script
+                        deployment.</p>
+                </div>
+                <div class="deployment-card">
+                    <i data-lucide="globe"></i>
+                    <h3>Domain Management</h3>
+                    <p>Configuring DNS records, SSL certificates, and setting up reverse proxies with Nginx/Apache.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i data-lucide="mail"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>battambangprogrammer@gmail.com
+                            </p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/chem-khoeurn</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+855 88 24 46 786</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form fade-in">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Chem Khoeurn Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Details Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <img src="" alt="Project Image" class="modal-img">
+                <h2 class="modal-title"></h2>
+                <div class="modal-tags"></div>
+                <p class="modal-desc"></p>
+                <div class="modal-links">
+                    <a href="#" class="btn btn-primary">Live Demo</a>
+                    <a href="#" class="btn btn-secondary">Source Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
