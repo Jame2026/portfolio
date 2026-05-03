@@ -182,11 +182,24 @@ projectCards.forEach(card => {
         const bgImage = window.getComputedStyle(card.querySelector('.project-img')).backgroundImage;
         // Strip 'url("...")'
         const imgUrl = bgImage.slice(5, -2);
+        
+        const demoUrl = card.getAttribute('data-demo') || '#';
+        const sourceUrl = card.getAttribute('data-source') || '#';
 
         modal.querySelector('.modal-title').innerText = title;
         modal.querySelector('.modal-desc').innerText = desc + " This project demonstrates advanced skill in full-stack development, utilizing modern frameworks and best practices.";
         modal.querySelector('.modal-tags').innerHTML = tags;
         modal.querySelector('.modal-img').src = imgUrl;
+        
+        const demoBtn = modal.querySelector('.modal-links .btn-primary');
+        demoBtn.href = demoUrl;
+        demoBtn.target = demoUrl !== '#' ? '_blank' : '_self';
+        demoBtn.style.display = demoUrl !== '#' ? 'inline-block' : 'none';
+
+        const sourceBtn = modal.querySelector('.modal-links .btn-secondary');
+        sourceBtn.href = sourceUrl;
+        sourceBtn.target = sourceUrl !== '#' ? '_blank' : '_self';
+        sourceBtn.style.display = sourceUrl !== '#' ? 'inline-block' : 'none';
 
         modal.classList.add('show');
         document.body.style.overflow = 'hidden';
